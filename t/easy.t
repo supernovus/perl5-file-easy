@@ -7,12 +7,15 @@ use Test::More;
 
 use lib './lib';
 
-my $class = "File::Easy";
+my $class;
+
+BEGIN {
+  $class = "File::Easy";
+  use_ok $class; 
+}
 
 my $filen1 = ".test1.txt";     ## One we'll generate.
 my $filen2 = "./t/test2.txt";  ## One we'll load.
-
-require_ok $class;
 
 my $file = new_ok($class => [filename => $filen1]);
 

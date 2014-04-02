@@ -1,0 +1,18 @@
+{
+  "hello" : "world",
+  "companies" :
+  {
+    "acme" :
+    {
+      "users" :
+      [
+        {
+          "name" : "Bob"
+        },
+        {
+          "name" : "Lisa"
+        }
+      ]
+    }
+  }
+}
