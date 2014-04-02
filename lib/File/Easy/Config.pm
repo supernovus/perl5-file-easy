@@ -195,7 +195,7 @@ sub get
         return $subval;
       }
     }
-    return $notfound(join(' | ', @$query), %opts);
+    return $notfound->(join(' | ', @$query), %opts);
   }
 
   my @keyspace = split(/\./, $query);
@@ -213,7 +213,7 @@ sub get
     }
     else
     {
-      return $notfound($key, %opts);
+      return $notfound->($key, %opts);
     }
   }
   return $data;

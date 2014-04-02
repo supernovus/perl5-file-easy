@@ -23,6 +23,8 @@ is $config->get('hello'), 'world', 'simple get()';
 
 is $config->get('companies.acme.users.1.name'), 'Lisa', 'nested get()';
 
+is $config->get(["goodbye", "hello"]), 'world', 'chained get()';
+
 ## TODO: test YAML config, set() and save().
 
 done_testing();
